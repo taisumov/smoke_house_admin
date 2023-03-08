@@ -2,7 +2,7 @@ name: CI
 on:
   push:
     branches:
-      - main
+      - master
 jobs:
   build_pub_run_on_server:
     runs-on: [ubuntu-latest]
@@ -11,7 +11,7 @@ jobs:
       SSH_HOST: ${{secrets.SSH_HOST}}
       SSH_KEY_PATH: ~/.ssh/id_rsa
     steps:
-      - uses: actions/checkout@main
+      - uses: actions/checkout@master
 
       - name: Create SSH Key
         run: |
