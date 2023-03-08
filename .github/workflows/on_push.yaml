@@ -29,3 +29,4 @@ jobs:
           ssh -i $SSH_KEY_PATH $SSH_USER@$SSH_HOST "mkdir -p ~/project/data/admin"
           cd build
           rsync -e "ssh -i $SSH_KEY_PATH" --archive --compress --delete . $SSH_USER@$SSH_HOST:~/project/data/admin
+          ssh -i $SSH_KEY_PATH $SSH_USER@$SSH_HOST "cd ~/project && docker compose exec nginx nginx -s reload"
