@@ -1,0 +1,30 @@
+name: CI
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build_pub_run_on_server:
+    runs-on: [ubuntu-latest]
+    env:
+      SSH_USER: ${{secrets.SSH_USER}}
+      SSH_HOST: ${{secrets.SSH_HOST}}
+      SSH_KEY_PATH: ~/.ssh/id_rsa
+    steps:
+      - uses: actions/checkout@main
+
+      - name: Create SSH Key
+        run: |
+          mkdir -p ~/.ssh/
+          install -m 600 -D /dev/null ~/.ssh/id_rsa
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          ssh-keyscan -H $SSH_HOST > ~/.ssh/known_hosts
+
+      - name: Create build
+      - run: npm ci && npm run build
+
+      - name: Deploy on server
+        run: |
+          ssh -i $SSH_KEY_PATH $SSH_USER@$SSH_HOST "mkdir -p ~/project/data/admin"
+          cd build
+          rsync -e "ssh -i $SSH_KEY_PATH" --archive --compress --delete . $SSH_USER@$SSH_HOST:~/project/data/admin
