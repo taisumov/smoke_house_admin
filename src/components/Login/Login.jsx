@@ -49,7 +49,7 @@ const Login = () => {
   }
 
   return (
-    <div className={style.container}>
+    <div className={style.container} style={{backgroundColor: 'red'}}>
       <div className={style.leftSide}>
         <div className={style.logo}>
           <img src={logo} alt="" className={style.img} />
