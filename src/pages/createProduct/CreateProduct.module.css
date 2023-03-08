@@ -1,0 +1,160 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 1000px;
+}
+.nameInput {
+}
+
+.images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(246px, 246px));
+  row-gap: 10px;
+  column-gap: 40px;
+  margin-top: 30px;
+}
+.image {
+  display: flex;
+  flex-direction: column;
+  width: 249px;
+  border: 1px solid rgba(184, 184, 184, 0.3);
+  padding: 10px;
+  border-radius: 5px;
+}
+.deleteButton {
+  width: 100%;
+  margin-top: 10px;
+}
+.addButton {
+  width: 150px;
+  margin: 30px 0;
+}
+
+.video {
+  display: flex;
+  flex-direction: column;
+}
+.videoLink {
+  width: 600px;
+}
+
+.characteristics {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.characteristic {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+.characteristicName {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 30px;
+}
+.nameChar {
+  width: 1070px;
+}
+.characteristicsArray {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 90%;
+}
+.char {
+  width: 250px;
+}
+.materialContainer {
+  display: flex;
+  flex-direction: column;
+}
+.textContainer {
+}
+
+.featureContainer {
+  margin-top: 30px;
+}
+.feature {
+  margin: 30px 0;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid rgba(184, 184, 184, 0.599);
+}
+.featureHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.featureName {
+  width: 1070px;
+}
+.close {
+}
+.featureDescription {
+  margin-top: 10px;
+}
+.textInCircle {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+.textInCircle__description {
+}
+.textInCircle__input {
+  width: 500px;
+  margin-right: 42px;
+}
+
+.equipmentContainer {
+  display: flex;
+  flex-direction: column;
+}
+.equipment {
+}
+.equipContainer {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.equip {
+  width: 1070px;
+}
+
+.price {
+  width: 400px;
+  margin-bottom: 40px;
+}
+.titleBox {
+  margin-bottom: 20px;
+}
+
+.saveButton {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.checkboxContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 60px;
+}
+.checkboxContainer__text {
+  margin-right: 20px;
+}

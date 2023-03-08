@@ -1,0 +1,21 @@
+.headerBlock {
+  margin-top: 30px;
+}
+.button {
+  /* display: flex;
+  flex-direction: row; */
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 200px;
+  height: 30px;
+}
+.checkboxContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.checkboxContainer__text {
+  margin-right: 20px;
+}

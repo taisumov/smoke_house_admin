@@ -1,0 +1,36 @@
+.advantageContainer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+.imgContainer {
+  display: flex;
+  flex-direction: row;
+  margin-top: 30px;
+}
+.imgBlock {
+  margin-right: 60px;
+}
+.editorContainer {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.editorBlock {
+  margin-bottom: 30px;
+}
+.buttonContainer {
+  width: 150px;
+  margin-bottom: 30px;
+}
+
+.checkboxContainer {
+  width: max-content;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.checkboxContainer__text {
+  margin-right: 20px;
+}

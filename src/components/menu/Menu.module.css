@@ -1,0 +1,57 @@
+.leftMenu {
+  position: fixed;
+  background: #37414a;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #ffffff;
+  width: 235px;
+  height: 100vh;
+}
+
+a:active, /* активная/посещенная ссылка */
+a:hover,  /* при наведении */
+a {
+  text-decoration: none;
+  color: #666;
+}
+
+.menuLogo {
+  margin-bottom: 120px;
+}
+
+.menuElementBox {
+}
+
+.menuElementBox__element {
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+  color: #ffffff;
+}
+
+.menuElementBox__element:hover {
+  cursor: pointer;
+}
+
+svg use {
+  fill: currentColor;
+}
+
+.menuElementBox__element__active {
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+  background: #ffffff;
+  color: #37414a;
+}
+
+.elementIcon {
+  object-fit: none;
+  margin-left: 15px;
+}
+
+.elementText {
+  text-align: left;
+  padding-top: 18px;
+}

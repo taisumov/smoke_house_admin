@@ -1,0 +1,49 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.inputsBlock {
+  display: flex;
+  flex-direction: column;
+}
+.inputContainer {
+  margin-bottom: 30px;
+}
+.titleBlock {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.deleteButton {
+  cursor: pointer;
+}
+.input {
+  margin-right: 40px;
+}
+
+.addButton {
+  width: 150px;
+}
+
+.emailInput {
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+.saveButton {
+  width: 150px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.checkboxContainer {
+  width: max-content;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  height: 14px;
+}
+.checkboxContainer__text {
+  margin-right: 20px;
+}

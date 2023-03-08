@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Oswald:wght@300&display=swap");
+
+.mBtn {
+  padding: 6px 27px;
+  box-sizing: border-box;
+  background-color: #fff;
+  border: 1px solid #37414a;
+  color: #000;
+  border-radius: 5px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  font-family: "Inter", sans-serif;
+  cursor: pointer;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.mBtn:hover {
+  background-color: #37414a;
+  color: #fff;
+}

@@ -1,0 +1,31 @@
+.advantageContainer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+.imgContainer {
+  display: flex;
+  flex-direction: row;
+  margin-top: 0px;
+  margin-bottom: 30px;
+}
+.imgBlock {
+  margin-right: 60px;
+}
+.videoBlock {
+  width: 700px;
+  margin-bottom: 30px;
+}
+.editorContainer {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.editorBlock {
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+.buttonContainer {
+  margin-top: 50px;
+  width: 150px;
+  margin-bottom: 30px;
+}

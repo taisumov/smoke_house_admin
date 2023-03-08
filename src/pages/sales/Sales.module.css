@@ -1,0 +1,42 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.sales {
+}
+.saleContainer {
+  margin-top: 30px;
+}
+
+.controlBlock {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.title {
+}
+.closeButton {
+  font-size: 28px;
+  cursor: pointer;
+}
+.addButton {
+  width: 180px;
+  margin-top: 30px;
+}
+.uploadButton {
+  width: 180px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  justify-self: flex-end;
+  align-self: flex-end;
+}
+.checkboxContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.checkboxContainer__text {
+  margin-right: 20px;
+}

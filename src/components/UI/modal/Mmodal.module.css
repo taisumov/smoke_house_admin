@@ -1,0 +1,38 @@
+.Mmodal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: none;
+  background: rgba(0, 0, 0, 0.5);
+}
+.MmodalContent {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  background: white;
+  min-width: 250px;
+  min-height: 50px;
+  background: #ffffff;
+  border-radius: 5px;
+  position: relative;
+  width: 1074px;
+  height: 310px;
+}
+.closeButton {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+}
+
+.Mmodal.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.closeButton {
+  width: 21px;
+  height: 21px;
+}

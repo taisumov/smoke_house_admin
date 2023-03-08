@@ -1,0 +1,26 @@
+.mCheckmark {
+  height: 16px;
+  width: 16px;
+  cursor: pointer;
+  border: 1px solid #37414a;
+  user-select: none;
+}
+
+.mark {
+  display: none;
+  width: 16px;
+  height: 16px;
+  background: no-repeat #37414a;
+}
+
+.active {
+  width: 17px;
+  height: 17px;
+  background: no-repeat #37414a;
+}
+
+.img {
+  width: 16px;
+  height: 16px;
+  object-fit: cover;
+}

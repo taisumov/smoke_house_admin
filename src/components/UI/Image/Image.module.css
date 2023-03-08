@@ -1,0 +1,86 @@
+.ImageContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 246px;
+  height: 162px;
+  background: rgba(30, 31, 37, 0.02);
+  border: 1px solid rgba(184, 184, 184, 0.3);
+  border-radius: 5px;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  cursor: pointer;
+}
+.iconBox {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 50%;
+  width: 100%;
+}
+
+.image {
+  height: 100%;
+}
+
+.imageIcon {
+  object-fit: cover;
+}
+
+video {
+  height: 100%;
+  z-index: 10;
+}
+
+.text {
+  height: 50%;
+  width: 100%;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  text-align: center;
+  color: #b8b8b8;
+}
+
+.hoverActive {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #37414a;
+  border-radius: 5px;
+  backdrop-filter: blur(4px);
+  z-index: 100;
+}
+
+.hover {
+  display: none;
+}
+.deleteButton {
+  position: absolute;
+  top: 38%;
+  left: 45%;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.imageLoad {
+  animation: spin 1s linear 0s infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

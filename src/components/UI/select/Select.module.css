@@ -1,0 +1,51 @@
+.selectContainer {
+  margin-bottom: 30px;
+}
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+}
+.select {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.text {
+}
+.optionsContainer {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(184, 184, 184, 0.3);
+  border-radius: 5px;
+  width: 540px;
+  max-height: 300px;
+  overflow-y: scroll;
+}
+.option {
+  margin: 10px;
+  cursor: pointer;
+}
+.addedList {
+  display: flex;
+  flex-direction: column;
+  max-height: 372px;
+  min-height: 100px;
+  width: 540px;
+  border: 1px solid rgba(184, 184, 184, 0.3);
+  border-radius: 5px;
+  margin-left: 30px;
+  align-items: center;
+}
+.selectOptionContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 10px;
+}
+.deleteButton {
+  margin-left: 30px;
+  cursor: pointer;
+}

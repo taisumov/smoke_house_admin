@@ -1,0 +1,59 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.imageContainer {
+  margin-top: 20px;
+}
+.images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(246px, 246px));
+  row-gap: 10px;
+  column-gap: 40px;
+  margin-top: 30px;
+}
+.image {
+  display: flex;
+  flex-direction: column;
+  width: 249px;
+  border: 1px solid rgba(184, 184, 184, 0.3);
+  padding: 10px;
+  border-radius: 5px;
+}
+.deleteButton {
+  width: 100%;
+  margin-top: 10px;
+}
+.addButton {
+  width: 150px;
+  margin: 30px 0;
+}
+
+.videoContainer {
+  display: flex;
+  flex-direction: column;
+}
+.videoBox {
+  display: flex;
+  flex-direction: column;
+}
+.video {
+  display: flex;
+  flex-direction: row;
+  margin: 20px 0;
+}
+.link {
+  width: 600px;
+}
+.delete {
+  margin-left: 60px;
+  cursor: pointer;
+}
+
+.saveButton {
+  display: flex;
+  width: 150px;
+  justify-self: flex-end;
+  align-self: flex-end;
+  margin-bottom: 30px;
+}

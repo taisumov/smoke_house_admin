@@ -1,0 +1,26 @@
+.videoContainer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+.videoBlock {
+  width: 1000px;
+  margin-top: 20px;
+}
+.buttonContainer {
+  width: 150px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.checkboxContainer {
+  width: max-content;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.checkboxContainer__text {
+  margin-right: 20px;
+}

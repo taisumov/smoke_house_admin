@@ -1,0 +1,26 @@
+.radiobuttonContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border: 1px solid #37414a;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.point {
+  display: none;
+  width: 46px;
+  height: 46px;
+  background: #37414a;
+  border-radius: 50%;
+}
+
+.active {
+  display: flex;
+  width: 46px;
+  height: 46px;
+  background: #37414a;
+  border-radius: 50%;
+}

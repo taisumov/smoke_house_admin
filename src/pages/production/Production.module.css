@@ -1,0 +1,22 @@
+.container {
+}
+.photoContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}
+.imageAreaContainer {
+  display: flex;
+  flex-direction: column;
+  justify-self: flex-end;
+  align-self: flex-end;
+}
+.editorBlock {
+  width: 850px;
+}
+.saveButton {
+  margin: 30px 0;
+  width: 150px;
+}

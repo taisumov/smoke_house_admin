@@ -1,0 +1,37 @@
+.mInput {
+  font-family: "Inter", sans-serif;
+  outline: none;
+  display: block;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #37414a;
+  text-align: left;
+  padding: 13px 20px;
+  background: rgba(30, 31, 37, 0.02);
+  border: 1px solid rgba(184, 184, 184, 0.3);
+  border-radius: 5px;
+  width: 100%;
+}
+.mInput::placeholder {
+  color: #b8b8b8;
+}
+.mInputError {
+  font-family: "Inter", sans-serif;
+  outline: none;
+  display: block;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #37414a;
+  text-align: left;
+  padding: 13px 20px;
+  background: rgba(30, 31, 37, 0.02);
+  border: 1px solid red;
+  border-radius: 5px;
+  width: 100%;
+}

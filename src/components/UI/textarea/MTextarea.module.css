@@ -1,0 +1,35 @@
+.mTextarea {
+  display: block;
+  font-family: "Inter", sans-serif;
+  outline: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #37414a;
+  background: rgba(30, 31, 37, 0.02);
+  border: 1px solid rgba(184, 184, 184, 0.3);
+  border-radius: 5px;
+  width: 98%;
+  height: 232px;
+}
+.mTextarea::placeholder {
+  color: #b8b8b8;
+}
+
+textarea {
+  resize: none;
+  padding-left: 20px !important;
+}
+
+.textArea {
+  margin-right: 30px;
+}
+.value {
+  width: 99%;
+  text-align: end;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #b8b8b8;
+}
