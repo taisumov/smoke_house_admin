@@ -21,7 +21,7 @@ jobs:
           ssh-keyscan -H $SSH_HOST > ~/.ssh/known_hosts
 
       - name: Create build
-      - run: npm ci && npm run build
+        run: npm ci && npm run build
 
       - name: Deploy on server
         run: |
