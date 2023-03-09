@@ -32,7 +32,7 @@ const Sales = () => {
       .get("/api/promo")
       .then((res) => {
         console.log(res);
-        setSales(res["data"]["sales"]);
+        setSales(res["data"]["promo"]);
         setVisible(res["data"]["visible"]);
       })
       .catch((err) => {
