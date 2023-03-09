@@ -32,7 +32,7 @@ const Header = () => {
         setTitle(a["title"]);
         setDescription(a["description"]);
         setImage([a["image"]]);
-        setVisible([a["visible"]]);
+        setVisible(a["visible"]);
       })
       .catch((err) => {
         console.log(err, "get");
