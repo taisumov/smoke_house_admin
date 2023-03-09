@@ -47,7 +47,7 @@ const Sales = () => {
 
   return (
     <div>
-        {isLoading ?
+        {!isLoading ?
             <div className={style.container}>
                 <div className={style.sales}>
                     {sales.map((sale, index) => (
