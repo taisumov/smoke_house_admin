@@ -19,7 +19,7 @@ const Sales = () => {
       .post("/api/promo/add", { text: sales, visible })
       .then((res) => {
         console.log(res);
-        setSales(res["data"]);
+        setSales(res["data"]["promo"]);
       })
       .catch((err) => {
         console.log(err, "get");
