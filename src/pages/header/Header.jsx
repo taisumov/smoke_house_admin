@@ -1,8 +1,5 @@
 import React from "react";
-import ImageArea from "../../components/UI/imageArea/ImageArea";
 import Image from "../../components/UI/Image/Image";
-import MInput from "../../components/UI/input/MInput";
-import TextArea from "../../components/UI/textarea/MTextarea";
 import Title from "../../components/UI/title/title";
 import Button from "../../components/UI/button/MButton";
 import PostEditor from "../../components/UI/postEditor/PostEditor";
@@ -35,6 +32,7 @@ const Header = () => {
         setTitle(a["title"]);
         setDescription(a["description"]);
         setImage([a["image"]]);
+        setVisible([a["visible"]]);
       })
       .catch((err) => {
         console.log(err, "get");
@@ -46,7 +44,7 @@ const Header = () => {
     let finalId = [];
     let files = [];
 
-    image.map((id, index) => {
+    image.map((id) => {
       console.log(typeof id, "id");
       if (id) {
         if (typeof id != "object") {
@@ -83,9 +81,8 @@ const Header = () => {
   }
 
   async function postData() {
-    setUpdate((prev) => (prev = true));
+    setUpdate(prev => true);
     await postImage().then((imageIds) => {
-      console.log({ title, description, image: imageIds[0], visible });
       host
         .post("/api/header/", {
           title,
@@ -111,7 +108,7 @@ const Header = () => {
             <Image
               id={image[0]}
               setID={(value) =>
-                setImage(image.map((el, ind) => (ind == 0 ? value : el)))
+                setImage(image.map((el, ind) => (ind === 0 ? value : el)))
               }
               update={update}
             />
