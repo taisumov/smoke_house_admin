@@ -14,7 +14,7 @@ const Header = () => {
   const [description, setDescription] = useState("");
   const [image, setImage] = useState([undefined]);
   const [isLoading, setIsLoading] = useState(true);
-  const [visible, setVisible] = useState(true);
+  const [visible, setVisible] = useState();
   const [update, setUpdate] = useState(false);
 
   useEffect(() => {
