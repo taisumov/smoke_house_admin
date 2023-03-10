@@ -10,7 +10,7 @@ import { host } from "../../http/axios";
 import Image from "../../components/UI/Image/Image";
 
 const Review = () => {
-  const [video, setVideo] = useState([{}]);
+  const [video, setVideo] = useState([{ src: "" }, { src: "" }]);
   const [picture, setPicture] = useState([{}, {}]);
   const [update, setUpdate] = useState(false);
   const [counter, setCounter] = useState(0);
@@ -27,7 +27,7 @@ const Review = () => {
           })
         );
         setCounter(res["data"]["photo"].length);
-        setVideo(res["data"]["video"]);
+        if (res["data"]["video"].length) setVideo(res["data"]["video"]);
         //setEmails(res["data"]["emails"]);
         //setPhones(res["data"]["phones"]);
       })
@@ -221,18 +221,18 @@ const Review = () => {
                   }}
                 />
               </div>
-              <div
+              {/* <div
                 className={style.delete}
                 onClick={() => {
                   setVideo(video.filter((vid, ind) => ind != index));
                 }}
               >
                 ╳
-              </div>
+              </div> */}
             </div>
           ))}
         </div>
-        <div className={style.addButton}>
+        {/* <div className={style.addButton}>
           <MButton
             onClick={() => {
               setVideo([...video, ""]);
@@ -240,7 +240,7 @@ const Review = () => {
           >
             Добавить
           </MButton>
-        </div>
+        </div> */}
         <div className={style.saveButton}>
           <MButton onClick={() => postData()}>Сохранить</MButton>
         </div>

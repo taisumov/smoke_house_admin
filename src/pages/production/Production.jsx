@@ -97,25 +97,26 @@ const Production = () => {
   }
 
   return (
-    <div className={style.container}>
-      {!isLoading ? (
-        <>
-          {cards.map((card, index) => (
-            <div className={style.photoContainer} key={index}>
-              <div className={style.imageAreaContainer}>
-                <Mtitle>Блок {index + 1}</Mtitle>
-                <Image
-                  id={card.src}
-                  setID={(value) =>
-                    setCards(
-                      cards.map((el, ind) =>
-                        ind == index ? { ...cards[index], src: value } : el
+    <>
+      <div className={style.container}>
+        {!isLoading ? (
+          <>
+            {cards.map((card, index) => (
+              <div className={style.photoContainer} key={index}>
+                <div className={style.imageAreaContainer}>
+                  <Mtitle>Блок {index + 1}</Mtitle>
+                  <Image
+                    id={card.src}
+                    setID={(value) =>
+                      setCards(
+                        cards.map((el, ind) =>
+                          ind == index ? { ...cards[index], src: value } : el
+                        )
                       )
-                    )
-                  }
-                  update={update}
-                />
-                {/* <ImageArea
+                    }
+                    update={update}
+                  />
+                  {/* <ImageArea
                   id={cards[index]["src"]}
                   setImage={(value) => {
                     setCards(
@@ -125,9 +126,9 @@ const Production = () => {
                     );
                   }}
                 /> */}
-              </div>
+                </div>
 
-              <div className={style.editorBlock}>
+                {/* <div className={style.editorBlock}>
                 <PostEditor
                   text={card["title"]}
                   setText={(value) => {
@@ -138,13 +139,14 @@ const Production = () => {
                     );
                   }}
                 />
+              </div> */}
               </div>
-            </div>
-          ))}
-        </>
-      ) : (
-        <div>Загрузка</div>
-      )}
+            ))}
+          </>
+        ) : (
+          <div>Загрузка</div>
+        )}
+      </div>
       <div className={style.saveButton}>
         <MButton
           onClick={() => {
@@ -154,7 +156,7 @@ const Production = () => {
           Сохранить
         </MButton>
       </div>
-    </div>
+    </>
   );
 };
 
