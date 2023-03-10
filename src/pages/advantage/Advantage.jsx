@@ -19,35 +19,14 @@ const Advantage = () => {
 
   useEffect(() => {
     getData();
-    // window.addEventListener("beforeunload", (e) => {
-    //   e.preventDefault();
-    //   console.log("HELLO WORLD");
-    //   e.returnValue = "You have unfinished changes!";
-    // });
   }, []);
-
-  // useEffect(() => {
-  //   return () => {
-  //     console.log("loooxx");
-  //     console.log(advantage, "loooxx1");
-  //     console.log(mainData, "loooxx2");
-  //   };
-  // }, []);
-
-  // useLayoutEffect(() => {
-  //   return () => {
-  //     console.log("looox");
-  //     console.log(advantage, "looox1");
-  //     console.log(mainData, "looox2");
-  //   };
-  // }, []);
 
   async function getData() {
     await host
       .get("/api/advantages")
       .then((res) => {
-        console.log(res["data"]);
-        setAdvantage(res["data"]);
+        setAdvantage(res["data"]["advantages"]);
+        setVisible(res["data"]["visible"]);
         // setMainData(res["data"]);
       })
       .catch((err) => {
@@ -107,8 +86,6 @@ const Advantage = () => {
   async function postData() {
     setUpdate((prev) => (prev = true));
     await postImage().then((imageIds) => {
-      // console.log(imageIds);
-      // console.log(advantage);
       host
         .post("/api/advantages", { advantage, visible })
         .then((res) => {
@@ -147,7 +124,7 @@ const Advantage = () => {
                   setID={(value) =>
                     setAdvantage(
                       advantage.map((el, ind) =>
-                        ind == index ? { ...el, main_photo: value } : el
+                        ind === index ? { ...el, main_photo: value } : el
                       )
                     )
                   }
