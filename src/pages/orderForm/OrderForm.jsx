@@ -20,6 +20,7 @@ const OrderForm = () => {
         console.log(res);
         setInputForm(res["data"]["names"]);
         setEmail(res["data"]["email"]);
+        setVisible(res["data"]["visible"])
       })
       .catch((err) => {
         console.log(err, "get");
@@ -32,7 +33,7 @@ const OrderForm = () => {
         return { name: el };
       }
     });
-    data = [...data, { name: email, is_email: true }, { visible: visible }];
+    data = {arr: [...data, { name: email, is_email: true }], visible};
     host
       .post("/api/forms/upload", data)
       .then((res) => {
