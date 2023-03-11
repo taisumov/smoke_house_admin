@@ -16,8 +16,8 @@ const Video = () => {
     host
       .get("/api/video/main")
       .then((res) => {
-        console.log(res, "1");
-        setVideoLink(res?.data);
+        setVideoLink(res?.data.video);
+        setVisible(res?.data.visible);
       })
       .catch((err) => {
         console.log(err, "get");
@@ -27,7 +27,11 @@ const Video = () => {
   function postData() {
     host
       .post("/api/video/main", { src: videoLink, visible })
-      .then((res) => {})
+      .then((res) => {
+        alert(res.status === 200
+            ? 'Сохранение прошло успешно! Обновите страницу для обновления информации.'
+            : 'Ошибка при сохранении! Обновите страницу и попробуйте снова.')
+      })
       .catch((err) => {
         console.log(err, "get");
       });
