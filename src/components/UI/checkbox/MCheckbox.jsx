@@ -6,11 +6,6 @@ const MCheckbox = ({ setInterview, interview }) => {
   const [isChecked, setIsChecked] = useState(false);
   const [activeClass, setActiveClass] = useState(style.mark);
 
-  // useEffect(() => {
-  //   console.log(interview);
-  //   setIsChecked(interview);
-  // }, [interview]);
-
   useEffect(() => {
     if (interview) {
       setActiveClass(style.active);

@@ -22,9 +22,7 @@ const Technology = () => {
       .then((res) => {
         console.log(res["data"]["techs"]);
         setData(res["data"]["techs"]);
-        //setData(res["data"]);
-        //setEmails(res["data"]["emails"]);
-        //setPhones(res["data"]["phones"]);
+
       })
       .catch((err) => {
         console.log(err, "get");

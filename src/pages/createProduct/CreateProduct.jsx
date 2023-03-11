@@ -37,7 +37,7 @@ const CreateProduct = () => {
   let categoryName = useParams();
 
   useEffect(() => {
-    // setIsLoading(true);
+
     console.log(categoryName);
     host
       .get("/api/item/all/get/short")
@@ -45,11 +45,7 @@ const CreateProduct = () => {
         console.log(res["data"]);
         setOptionsProduct(res["data"].map((item) => item["name"]));
         setAdditionalProductList(res["data"]);
-        //setDescription(res["data"]["text"]);
-        //setCards(res["data"]["images"]);
-        //setIsLoading(false);
-        //setEmails(res["data"]["emails"]);
-        //setPhones(res["data"]["phones"]);
+
       })
       .catch((err) => {
         console.log(err, "get");
@@ -110,7 +106,7 @@ const CreateProduct = () => {
     setUpdate(true);
     let imageIds = await postImage();
     let parameters = [];
-    //console.log(characteristics["name"]);
+
     characteristics.map((ch) => {
       parameters.push({
         name: ch["name"],

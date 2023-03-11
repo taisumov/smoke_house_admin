@@ -22,8 +22,6 @@ const WorkWithUs = () => {
       .then((res) => {
         console.log(res["data"]);
         setDataJSON(res["data"]);
-        //setEmails(res["data"]["emails"]);
-        //setPhones(res["data"]["phones"]);
       })
       .catch((err) => {
         console.log(err, "get");

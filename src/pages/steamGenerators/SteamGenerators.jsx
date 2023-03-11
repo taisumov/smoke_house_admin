@@ -28,11 +28,6 @@ const SteamGenerators = () => {
       .then((res) => {
         console.log(res["data"]);
         setCatalog(res["data"]);
-        //setDescription(res["data"]["text"]);
-        //setCards(res["data"]["images"]);
-        //setIsLoading(false);
-        //setEmails(res["data"]["emails"]);
-        //setPhones(res["data"]["phones"]);
       })
       .catch((err) => {
         console.log(err, "get");

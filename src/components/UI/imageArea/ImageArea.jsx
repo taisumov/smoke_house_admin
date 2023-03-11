@@ -75,26 +75,7 @@ const ImageArea = ({
     setDrag(false);
   }
 
-  // function getImage(id) {
-  //   axios
-  //     .post(`${process.env["REACT_APP_HOST"]}/api/media/upload`, {
-  //       headers: {
-  //         Authorization: `Bearer ${gwt}`,
-  //         "ngrok-skip-browser-warning": "qwerty",
-  //       },
-  //     })
-  //     .then((res) => {
-  //       setUploadImage(res.data);
-  //       console.log("get");
-  //       setLoading(false);
-  //       //console.log(image, "4567");
-  //       //setImage(image);
-  //       return res.blob;
-  //     })
-  //     .catch((err) => {
-  //       console.log(err);
-  //     });
-  // }
+
 
   function postImage(file) {
     setLoading(true);

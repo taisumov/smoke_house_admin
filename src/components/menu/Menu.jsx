@@ -109,27 +109,6 @@ const Menu = ({ setNavigationElements }) => {
     }
   }, []);
 
-  // useEffect(() => {
-  //   if (~loc.pathname.indexOf("/poster/createEvent/edit/")) {
-  //     console.log(loc.pathname, "first");
-  //     let newMenuElement = menuElement;
-  //     newMenuElement[1][4] = [
-  //       ["Список событий", "poster/eventList"],
-  //       ["Создать событие", "poster/createEvent"],
-  //       ["Редактировать событие", loc.pathname],
-  //     ];
-  //     setMenuElement(newMenuElement);
-  //     //setActiveElement(1);
-  //   } else {
-  //     let newMenuElement = menuElement;
-  //     newMenuElement[1][4] = [
-  //       ["Список событий", "poster/eventList"],
-  //       ["Создать событие", "poster/createEvent"],
-  //     ];
-  //     setMenuElement(newMenuElement);
-  //   }
-  // }, [loc.pathname]);
-
   useLayoutEffect(() => {
     setNavigationElements(menuElement[activeElement][4]);
   }, [activeElement]);

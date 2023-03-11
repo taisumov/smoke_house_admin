@@ -21,9 +21,6 @@ const Production = () => {
       .then((res) => {
         console.log(res);
         setCards(res["data"]);
-        //setData(res["data"]);
-        //setEmails(res["data"]["emails"]);
-        //setPhones(res["data"]["phones"]);
       })
       .catch((err) => {
         console.log(err, "get");

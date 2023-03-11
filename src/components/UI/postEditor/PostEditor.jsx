@@ -108,21 +108,6 @@ const PostEditor = ({ text, setText, ...props }) => {
             border: "2px solid black",
           }}
           onInput={(e) => {
-            // document.execCommand("styleWithCSS", true);
-            // document.execCommand("fontName", false, "GothamPro");
-            // e.target.innerHTML = e.target.innerHTML.replace(
-            //   "font-size: 14px;",
-            //   ""
-            // );
-            // e.target.innerHTML = e.target.innerHTML.replace(
-            //   "font-size: x-large",
-            //   ""
-            // );
-            // e.target.innerHTML = e.target.innerHTML.replace(
-            //   `style=\"font-family: &quot;Open Sans&quot;, Arial, sans-serif; text-align: justify; ;\"`,
-            //   ""
-            // );
-
             e.target.focus();
             setText(e.target.innerHTML);
           }}

@@ -26,10 +26,6 @@ const Footer = () => {
   }, []);
 
   function postData() {
-    //let data = inputForm.map((el) => {
-    //  return { name: el };
-    //});
-    //data = [...data, { name: email, is_email: true }];
     let data = [];
     phones.map((el) => {
       data.push({ ...el, type: "number" });

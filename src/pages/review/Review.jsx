@@ -28,8 +28,6 @@ const Review = () => {
         );
         setCounter(res["data"]["photo"].length);
         if (res["data"]["video"].length) setVideo(res["data"]["video"]);
-        //setEmails(res["data"]["emails"]);
-        //setPhones(res["data"]["phones"]);
       })
       .catch((err) => {
         console.log(err, "get");

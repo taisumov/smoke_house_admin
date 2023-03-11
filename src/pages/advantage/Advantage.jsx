@@ -13,7 +13,7 @@ import Image from "../../components/UI/Image/Image";
 
 const Advantage = () => {
   const [advantage, setAdvantage] = useState([]);
-  // const [mainData, setMainData] = useState([]);
+
   const [visible, setVisible] = useState(true);
   const [update, setUpdate] = useState(false);
 
@@ -27,7 +27,6 @@ const Advantage = () => {
       .then((res) => {
         setAdvantage(res["data"]["advantages"]);
         setVisible(res["data"]["visible"]);
-        // setMainData(res["data"]);
       })
       .catch((err) => {
         console.log(err, "get");
@@ -89,7 +88,6 @@ const Advantage = () => {
               ? "Сохранение прошло успешно! Обновите страницу для обновления информации."
               : "Ошибка при сохранении! Обновите страницу и попробуйте снова."
           );
-          // setAdvantage(res["data"]);
         })
         .catch((err) => {
           console.log(err, "get");

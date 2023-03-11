@@ -36,10 +36,6 @@ const Reviews = () => {
         setCounter(res["data"]["photo"].length);
         setVideo(res["data"]["video"]);
         setText(res["data"]["text"]);
-        //setCards(res["data"]);
-        //setData(res["data"]);
-        //setEmails(res["data"]["emails"]);
-        //setPhones(res["data"]["phones"]);
       })
       .catch((err) => {
         console.log(err, "get");
