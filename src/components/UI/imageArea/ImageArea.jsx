@@ -27,7 +27,6 @@ const ImageArea = ({
   useEffect(() => {
     if (id) {
       setUploadImage(`${process.env["REACT_APP_HOST"]}/media/${id}`);
-      console.log(`${process.env["REACT_APP_HOST"]}/media/${id}`);
     }
   }, [id]);
 
@@ -37,7 +36,7 @@ const ImageArea = ({
       setFileId(`${process.env["REACT_APP_HOST"]}/media/${id}`);
     } else {
       setFileId(id);
-      console.log(id);
+
       if (id != undefined) {
         //getImage(id);
       }
@@ -59,7 +58,6 @@ const ImageArea = ({
   }
 
   function uploadFile(e, file_input) {
-    console.log(file_input);
     let dataArray = new FormData();
     for (let i = 0; i < file_input.files.length; i++) {
       dataArray.append("file", file_input.files[i]);
@@ -99,21 +97,18 @@ const ImageArea = ({
   // }
 
   function postImage(file) {
-    console.log(file);
     setLoading(true);
     host
       .post(`${process.env["REACT_APP_HOST"]}/api/media/upload`, file, {})
       .then((res) => {
-        console.log(res, "lox");
         setUploadImage(`${process.env["REACT_APP_HOST"]}/media/${res["data"]}`);
         setImage(res["data"]);
         setFileId(res.data.id);
-        console.log(res.data.id);
+
         setLoading(false);
         return res.data.id;
       })
       .then((id) => {
-        console.log("post", id);
         //contentID(id);
         //getImage(id);
       })
@@ -123,7 +118,6 @@ const ImageArea = ({
   }
 
   function deleteImage() {
-    console.log({ img: uploadImage.split("/").at(-1) });
     if (setDelMedia) {
       setDelMedia(fileId);
     }
@@ -132,7 +126,6 @@ const ImageArea = ({
         img: uploadImage.split("/").at(-1),
       })
       .then((res) => {
-        console.log(res);
         setUploadImage(undefined);
         setLoading(false);
         setImage("");

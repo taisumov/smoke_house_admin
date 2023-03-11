@@ -18,17 +18,14 @@ const Image = ({ width, height, id, setID, update }) => {
   const [uploadFlag, setUploadFlag] = useState(true);
 
   useEffect(() => {
-    console.log(id);
     if (typeof id != "object" && uploadFlag && id) {
       setUploadFlag(false);
-      console.log("lox");
       getImage(id);
     }
   }, [id]);
 
   useEffect(() => {
     if (update) {
-      console.log(del);
       if (del && typeof del != "object") {
         delPost(del);
       }
@@ -36,7 +33,6 @@ const Image = ({ width, height, id, setID, update }) => {
   }, [update]);
 
   async function delPost(delId) {
-    console.log({ img: delId }, "delete");
     await host
       .post(
         `${process.env["REACT_APP_HOST"]}/api/media/delete`,
@@ -47,9 +43,7 @@ const Image = ({ width, height, id, setID, update }) => {
           },
         }
       )
-      .then((res) => {
-        console.log(res);
-      })
+      .then((res) => {})
       .catch((err) => {
         console.log(err);
       });
@@ -64,9 +58,8 @@ const Image = ({ width, height, id, setID, update }) => {
         (e) => {
           // setFile(file_input.files);
           setUploadImage(URL.createObjectURL(file_input.files[0]));
-          console.log(URL.createObjectURL(file_input.files[0]), "1111");
+
           setID(file_input.files[0]);
-          console.log(URL.createObjectURL(file_input.files[0]));
         },
         false
       );

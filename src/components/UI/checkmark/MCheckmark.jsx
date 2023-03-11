@@ -16,11 +16,9 @@ const MCheckmark = ({ id, add, del, deleteList }) => {
   useEffect(() => {
     if (isChecked) {
       setActiveClass(style.active);
-      console.log("active");
       add(id);
     } else {
       setActiveClass(style.mark);
-      console.log("dis");
       del(id);
     }
   }, [isChecked]);

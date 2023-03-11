@@ -15,7 +15,6 @@ export const AuthProvider = ({ children }) => {
         username: login,
       })
       .then((res) => {
-        console.log(res["data"]);
         sessionStorage.setItem("jwt", res["data"]);
         cb();
       })
@@ -25,7 +24,6 @@ export const AuthProvider = ({ children }) => {
   };
   const signout = (cb) => {
     sessionStorage.setItem("jwt", null);
-    console.log("first");
     navigate("/auth", { replace: true });
     cb();
   };

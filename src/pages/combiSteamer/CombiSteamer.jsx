@@ -11,9 +11,7 @@ const CombiSteamer = () => {
   function deleteProduct(id) {
     host
       .delete(`/api/item/delete/${id}`)
-      .then((res) => {
-        console.log(res["data"]);
-      })
+      .then((res) => {})
       .catch((err) => {
         console.log(err, "get");
       });
@@ -24,7 +22,6 @@ const CombiSteamer = () => {
     host
       .post("/api/item/all/get/category", { category: "Пароконвектоматы" })
       .then((res) => {
-        console.log(res["data"]);
         setCatalog(res["data"]);
         //setDescription(res["data"]["text"]);
         //setCards(res["data"]["images"]);

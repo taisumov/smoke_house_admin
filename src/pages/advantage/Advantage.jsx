@@ -40,7 +40,6 @@ const Advantage = () => {
 
     advantage.map((id, index) => {
       if (id?.main_photo) {
-        console.log(id.main_photo, "o");
         if (typeof id.main_photo != "object") {
           finalId[index] = id.main_photo;
         } else {
@@ -51,13 +50,10 @@ const Advantage = () => {
         }
       }
     });
-    console.log(finalId, "id");
+
     let data = [...advantage];
     await Promise.all(
       files.map((file) => {
-        console.log(`${process.env["REACT_APP_HOST"]}/api/media/upload`);
-        console.log(file.dataArray);
-        console.log(`Bearer ${sessionStorage.getItem("jwt")}`);
         return host
           .post(
             `${process.env["REACT_APP_HOST"]}/api/media/upload`,
@@ -76,7 +72,6 @@ const Advantage = () => {
           });
       })
     ).then(() => {
-      console.log(finalId);
       setAdvantage(data);
     });
 
@@ -89,7 +84,6 @@ const Advantage = () => {
       host
         .post("/api/advantages", { advantage, visible })
         .then((res) => {
-          console.log(res["data"]);
           alert(
             res.status === 200
               ? "Сохранение прошло успешно! Обновите страницу для обновления информации."
