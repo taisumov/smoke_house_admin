@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useLayoutEffect } from "react";
 import style from "./Menu.module.css";
-import logo from "./image/logo.svg";
+import logo from "./image/logo.png";
 import IconMain from "./image/house-fill.svg";
 import IconMainD from "./image/house-fill-dark.svg";
 import iconPoster from "./image/card-image.svg";

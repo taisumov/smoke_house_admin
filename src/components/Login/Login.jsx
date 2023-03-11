@@ -4,7 +4,7 @@ import Checkbox from "../UI/checkbox/MCheckbox";
 import Button from "../UI/button/MButton";
 import style from "./Login.module.css";
 import background from "./background.svg";
-import logo from "./logo.svg";
+import logo from "./logo.png";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useAuth } from "../../hooks/useAuth";
 
