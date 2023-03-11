@@ -140,6 +140,11 @@ const Reviews = () => {
       .post("/api/feedback", data)
       .then((res) => {
         console.log(res);
+        alert(
+          res.status === 200
+            ? "Сохранение прошло успешно! Обновите страницу для обновления информации."
+            : "Ошибка при сохранении! Обновите страницу и попробуйте снова."
+        );
       })
       .catch((err) => {
         console.log(err, "get");

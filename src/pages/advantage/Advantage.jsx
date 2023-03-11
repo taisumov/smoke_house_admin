@@ -90,7 +90,12 @@ const Advantage = () => {
         .post("/api/advantages", { advantage, visible })
         .then((res) => {
           console.log(res["data"]);
-          setAdvantage(res["data"]);
+          alert(
+            res.status === 200
+              ? "Сохранение прошло успешно! Обновите страницу для обновления информации."
+              : "Ошибка при сохранении! Обновите страницу и попробуйте снова."
+          );
+          // setAdvantage(res["data"]);
         })
         .catch((err) => {
           console.log(err, "get");

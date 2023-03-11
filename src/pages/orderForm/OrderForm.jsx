@@ -17,7 +17,7 @@ const OrderForm = () => {
     host
       .get("/api/forms/get")
       .then((res) => {
-        console.log(res["data"]["names"]);
+        console.log(res);
         setInputForm(res["data"]["names"]);
         setEmail(res["data"]["email"]);
       })
@@ -35,7 +35,13 @@ const OrderForm = () => {
     data = [...data, { name: email, is_email: true }, { visible: visible }];
     host
       .post("/api/forms/upload", data)
-      .then((res) => {})
+      .then((res) => {
+        alert(
+          res.status === 200
+            ? "Сохранение прошло успешно! Обновите страницу для обновления информации."
+            : "Ошибка при сохранении! Обновите страницу и попробуйте снова."
+        );
+      })
       .catch((err) => {
         console.log(err, "get");
       });

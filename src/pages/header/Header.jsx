@@ -81,7 +81,7 @@ const Header = () => {
   }
 
   async function postData() {
-    setUpdate(prev => true);
+    setUpdate((prev) => true);
     await postImage().then((imageIds) => {
       host
         .post("/api/header/", {
@@ -92,6 +92,11 @@ const Header = () => {
         })
         .then((res) => {
           console.log(res, "post");
+          alert(
+            res.status === 200
+              ? "Сохранение прошло успешно! Обновите страницу для обновления информации."
+              : "Ошибка при сохранении! Обновите страницу и попробуйте снова."
+          );
         })
         .catch((err) => {
           console.log(err, "post");
